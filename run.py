@@ -9,7 +9,7 @@ def run(text):
     if (re.match('close|exit', text, re.IGNORECASE)):
         return 'exit'
     for conf in config:
-        matches = re.match(conf['regex'], text, re.IGNORECASE)
+        matches = re.search(conf['regex'], text, re.IGNORECASE)
         if (matches):
             arg = matches.groups()[-1]
             if (conf['type'] == 'web-click'):
@@ -25,5 +25,5 @@ def run(text):
             else:
                 print('Unknown type')
             return
-        else:
-            print('Unknown command')
+    print('Unknown command')
+    return
