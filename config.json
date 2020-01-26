@@ -1,0 +1,26 @@
+[
+    {
+        "type": "web-click",
+        "url": "https://www.youtube.com/results?search_query=",
+        "regex": "(play|open) (movie|video) ([\\w\\s]+)"
+    },
+    {
+        "type": "web",
+        "url": "https://www.google.pl/search?q=",
+        "regex": "(search|tell me about|find) ([\\w\\s]+)"
+    },
+    {
+        "type": "command",
+        "command": "date",
+        "regex": "(what time is it|date|time)"
+    },
+    {
+        "type": "run-path",
+        "regex": "(run|open|execute|exec) name",
+        "path": ""
+    },
+    {
+        "type": "run",
+        "regex": "(run|open|execute|exec) (program|app|application) ([\\w\\s]+)"
+    }
+]
